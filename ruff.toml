@@ -26,3 +26,6 @@ ignore = [
     "TRY003",
     "RUF012"
 ]
+
+[lint.per-file-ignores]
+"tests.py" = ["S101"]
