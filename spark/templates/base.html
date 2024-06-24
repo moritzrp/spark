@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="{% static 'css/pico.classless.jade.min.css' %}">
+    <title>Polls App</title>
+  </head>
+  <body>
+    <header>
+    <nav>
+    <ul>
+      <li><strong>Spark</strong></li>
+    </ul>
+    <ul>
+      <li><a class="secondary" href="#">About</a></li> <li><a href="#">Home</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main class="container">
+      {% block content %}
+        Content goes here
+      {% endblock content %}
+    </main>
+  </body>
+</html>
