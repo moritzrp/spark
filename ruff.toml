@@ -1,4 +1,4 @@
-extend_exlude = [migrations]
+extend_exlude = ["migrations"]
 
 [lint]
 extend-select = [
