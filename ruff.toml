@@ -1,0 +1,28 @@
+[lint]
+extend-select = [
+    "ANN",
+    "ARG",
+    "C4",
+    "C901",
+    "DJ",
+    "ERA",
+    "FIX",
+    "G",
+    "I",
+    "LOG",
+    "N",
+    "PL",
+    "RUF",
+    "S",
+    "SIM",
+    "TD",
+    "TID",
+    "TRY"
+]
+
+ignore = [
+    "ANN101",
+    "ANN102",
+    "TRY003",
+    "RUF012"
+]
