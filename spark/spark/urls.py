@@ -18,11 +18,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-
-def some(test):
-    return False
-
-
 urlpatterns = [
     path("admin/", admin.site.urls),
 ]
