@@ -1,3 +1,5 @@
+extend_exlude = [migrations]
+
 [lint]
 extend-select = [
     "ANN",
