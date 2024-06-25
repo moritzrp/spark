@@ -1,6 +1,23 @@
 services:
+  spark:
+    build:
+      context: .
+    container_name: spark
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./spark:/app/spark
+      - media_data:/vol/web
+    command: >
+      sh -c "python manage.py migrate && \
+             python manage.py clearsessions && \
+      python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - spark_db
+    restart: no
   spark_db:
     image: postgres:16.3-alpine
+    container_name: spark_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
@@ -10,4 +27,5 @@ services:
     ports:
       - "5432:5432"
 volumes:
+  media_data: {}
   postgres_data: {}

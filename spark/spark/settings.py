@@ -69,7 +69,7 @@ WSGI_APPLICATION = "spark.wsgi.application"
 
 DATABASES = {
     "default": env.db(
-        "SPARK_DB_URL", default="postgres://spark:spark@localhost:5432/spark"
+        "SPARK_DB_URL", default="postgres://spark:spark@spark_db:5432/spark"
     )
 }
 DATABASES["default"]["TEST"] = {"NAME": "spark_test"}
@@ -112,6 +112,9 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+STATIC_ROOT = "/vol/web/static"
+MEDIA_ROOT = "/vol/web/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
