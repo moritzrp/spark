@@ -21,6 +21,17 @@ pip install -r requirements.txt
 pre-commit install
 ```
 
+### Start services
+
+Spark connects to a Postgres database. You can host your own
+for development via docker or docker-compose.
+
+```bash
+docker compose up -d
+```
+
+This will start Postgres and listen on port 5432.
+
 ### Start server
 
 ```bash
