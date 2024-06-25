@@ -15,7 +15,11 @@
       <li><strong>Spark</strong></li>
     </ul>
     <ul>
-      <li><a class="secondary" href="#">About</a></li> <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Home</a></li>
+      {% if user.is_staff %}
+      <li><a href="{% url 'admin:index' %}">Admin</a></li>
+      {% endif %}
     </ul>
     </nav>
     </header>
