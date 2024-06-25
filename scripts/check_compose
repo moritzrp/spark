@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if docker compose version &>/dev/null; then
+    DOCKER_COMPOSE="docker compose"
+elif docker-compose version &>/dev/null; then
+    DOCKER_COMPOSE="docker-compose"
+else
+    echo "ERROR: Neither \"docker-compose\" nor \"docker compose\" are available."
+    exit 1
+fi
+
+export $DOCKER_COMPOSE
